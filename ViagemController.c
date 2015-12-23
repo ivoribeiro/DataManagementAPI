@@ -24,7 +24,7 @@ void getShowViagem(Model *viagemModel, const unsigned int indice) {
 }
 
 void postViagem(Model *viagemModel) {
-    printf("Tem a certeza que pertende inserir um novo viagem?[Y/N]\n");
+    printf("Tem a certeza que pertende inserir uma nova viagem?[Y/N]\n");
     char resposta;
     readChar(&resposta);
     if (resposta == 'Y' || resposta == 'y') {

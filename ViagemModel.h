@@ -28,7 +28,7 @@ extern "C" {
         Date data_saida;
     } Viagem;
 
-    enum CamposUtilizador {
+    enum CamposViagem {
         ID_VIAGEM,
         ID_LOCAL_INICIO,
         ID_LOCAL_DESTINO,

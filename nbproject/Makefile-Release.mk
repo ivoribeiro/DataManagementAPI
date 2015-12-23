@@ -40,6 +40,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/DataManagement.o \
 	${OBJECTDIR}/Get.o \
 	${OBJECTDIR}/List.o \
+	${OBJECTDIR}/LocalController.o \
+	${OBJECTDIR}/LocalModel.o \
 	${OBJECTDIR}/Memory.o \
 	${OBJECTDIR}/Print.o \
 	${OBJECTDIR}/Read.o \
@@ -106,6 +108,16 @@ ${OBJECTDIR}/List.o: List.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/List.o List.c
+
+${OBJECTDIR}/LocalController.o: LocalController.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/LocalController.o LocalController.c
+
+${OBJECTDIR}/LocalModel.o: LocalModel.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/LocalModel.o LocalModel.c
 
 ${OBJECTDIR}/Memory.o: Memory.c 
 	${MKDIR} -p ${OBJECTDIR}

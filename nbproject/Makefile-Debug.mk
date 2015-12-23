@@ -40,6 +40,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/ConfortoController.o \
 	${OBJECTDIR}/ConfortoModel.o \
 	${OBJECTDIR}/DataManagement.o \
+	${OBJECTDIR}/EstadoController.o \
+	${OBJECTDIR}/EstadoModel.o \
 	${OBJECTDIR}/Get.o \
 	${OBJECTDIR}/List.o \
 	${OBJECTDIR}/LocalController.o \
@@ -110,6 +112,16 @@ ${OBJECTDIR}/DataManagement.o: DataManagement.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/DataManagement.o DataManagement.c
+
+${OBJECTDIR}/EstadoController.o: EstadoController.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/EstadoController.o EstadoController.c
+
+${OBJECTDIR}/EstadoModel.o: EstadoModel.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/EstadoModel.o EstadoModel.c
 
 ${OBJECTDIR}/Get.o: Get.c 
 	${MKDIR} -p ${OBJECTDIR}

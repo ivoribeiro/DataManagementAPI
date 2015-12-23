@@ -6,6 +6,7 @@
                    projectFiles="true">
       <logicalFolder name="f1" displayName="controllers" projectFiles="true">
         <itemPath>ConfortoController.h</itemPath>
+        <itemPath>EstadoController.h</itemPath>
         <itemPath>LocalController.h</itemPath>
         <itemPath>TipoUtilizadorController.h</itemPath>
         <itemPath>UtilizadorController.h</itemPath>
@@ -13,6 +14,7 @@
       </logicalFolder>
       <logicalFolder name="f2" displayName="models" projectFiles="true">
         <itemPath>ConfortoModel.h</itemPath>
+        <itemPath>EstadoModel.h</itemPath>
         <itemPath>LocalModel.h</itemPath>
         <itemPath>TipoUtilizadorModel.h</itemPath>
         <itemPath>UtilizadorModel.h</itemPath>
@@ -47,6 +49,7 @@
         </logicalFolder>
         <logicalFolder name="f2" displayName="controllers" projectFiles="true">
           <itemPath>ConfortoController.c</itemPath>
+          <itemPath>EstadoController.c</itemPath>
           <itemPath>LocalController.c</itemPath>
           <itemPath>TipoUtilizadorController.c</itemPath>
           <itemPath>UtilizadorController.c</itemPath>
@@ -60,6 +63,7 @@
         </logicalFolder>
         <logicalFolder name="f1" displayName="models" projectFiles="true">
           <itemPath>ConfortoModel.c</itemPath>
+          <itemPath>EstadoModel.c</itemPath>
           <itemPath>LocalModel.c</itemPath>
           <itemPath>TipoUtilizadorModel.c</itemPath>
           <itemPath>UtilizadorModel.c</itemPath>
@@ -141,6 +145,14 @@
       <item path="DataTypes.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Date.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EstadoController.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="EstadoController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EstadoModel.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="EstadoModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Get.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -264,6 +276,14 @@
       <item path="DataTypes.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Date.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EstadoController.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="EstadoController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="EstadoModel.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="EstadoModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Get.c" ex="false" tool="0" flavor2="0">
       </item>

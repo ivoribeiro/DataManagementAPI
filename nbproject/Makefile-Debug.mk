@@ -51,6 +51,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/UtilizadorController.o \
 	${OBJECTDIR}/UtilizadorModel.o \
 	${OBJECTDIR}/Utils.o \
+	${OBJECTDIR}/ViagemController.o \
+	${OBJECTDIR}/ViagemModel.o \
 	${OBJECTDIR}/file.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/main_teste.o
@@ -159,6 +161,16 @@ ${OBJECTDIR}/Utils.o: Utils.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Utils.o Utils.c
+
+${OBJECTDIR}/ViagemController.o: ViagemController.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ViagemController.o ViagemController.c
+
+${OBJECTDIR}/ViagemModel.o: ViagemModel.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ViagemModel.o ViagemModel.c
 
 ${OBJECTDIR}/file.o: file.c 
 	${MKDIR} -p ${OBJECTDIR}

@@ -7,16 +7,19 @@
       <logicalFolder name="f1" displayName="controllers" projectFiles="true">
         <itemPath>TipoUtilizadorController.h</itemPath>
         <itemPath>UtilizadorController.h</itemPath>
+        <itemPath>ViagemController.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="models" projectFiles="true">
         <itemPath>TipoUtilizadorModel.h</itemPath>
         <itemPath>UtilizadorModel.h</itemPath>
+        <itemPath>ViagemModel.h</itemPath>
       </logicalFolder>
       <itemPath>AbstractDataTypes.h</itemPath>
       <itemPath>Cast.h</itemPath>
       <itemPath>Compare.h</itemPath>
       <itemPath>DataManagement.h</itemPath>
       <itemPath>DataTypes.h</itemPath>
+      <itemPath>Date.h</itemPath>
       <itemPath>Get.h</itemPath>
       <itemPath>List.h</itemPath>
       <itemPath>Memory.h</itemPath>
@@ -41,6 +44,7 @@
         <logicalFolder name="f2" displayName="controllers" projectFiles="true">
           <itemPath>TipoUtilizadorController.c</itemPath>
           <itemPath>UtilizadorController.c</itemPath>
+          <itemPath>ViagemController.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f5" displayName="database" projectFiles="true">
           <logicalFolder name="f2" displayName="migrations" projectFiles="true">
@@ -51,6 +55,7 @@
         <logicalFolder name="f1" displayName="models" projectFiles="true">
           <itemPath>TipoUtilizadorModel.c</itemPath>
           <itemPath>UtilizadorModel.c</itemPath>
+          <itemPath>ViagemModel.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f1" displayName="storage" projectFiles="true">
           <logicalFolder name="f1" displayName="logs" projectFiles="true">
@@ -119,6 +124,8 @@
       </item>
       <item path="DataTypes.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Date.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Get.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Get.h" ex="false" tool="3" flavor2="0">
@@ -170,6 +177,14 @@
       <item path="Utils.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ViagemController.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ViagemController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ViagemModel.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ViagemModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="file.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -216,6 +231,8 @@
       </item>
       <item path="DataTypes.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Date.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Get.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Get.h" ex="false" tool="3" flavor2="0">
@@ -267,6 +284,14 @@
       <item path="Utils.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Utils.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ViagemController.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ViagemController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ViagemModel.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ViagemModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="file.c" ex="false" tool="0" flavor2="0">
       </item>

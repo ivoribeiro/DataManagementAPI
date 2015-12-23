@@ -11,11 +11,10 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-
+    
 #include "UtilizadorModel.h"
 #include "DataManagement.h"
 #include "ReadADT.h"
-
 
 #ifdef	__cplusplus
 }

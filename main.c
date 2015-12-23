@@ -18,6 +18,9 @@
 //---------Utilizador---------------
 #include "UtilizadorModel.h"
 #include "UtilizadorController.h"
+//---------Viagem---------------
+#include "ViagemModel.h"
+#include "ViagemController.h"
 
 /*
  * 
@@ -96,6 +99,79 @@ int main(int argc, char** argv) {
     //putUtilizador(&utilizadorModel, 0);
     //getShowUtilizador(&utilizadorModel, 0);
     //deleteUtilizador(&utilizadorModel,0);
+
+
+    //---------------------------------------------------------------------------------------------------------//
+
+    Model viagemModel;
+
+    const unsigned int MAX_VIAGENS = 30;
+    unsigned short contadorViagem = 0;
+
+
+    //Campos TipoViagem
+
+    FieldAux viagemFields[] = {
+        {
+            .fieldName = "id_viagem", .alias = "Numero Viagem", .sizeBytes = SHORT_SIZE, .type = SHORT, .unique = true,
+            .required = true, .autoIncrement = true, .step = 1
+        },
+        {
+            .fieldName = "id_local_inicio", .alias = "Id Local Inicio", .sizeBytes = SHORT_SIZE, .type = SHORT,
+            .required = true, .unique = false, .foreignKey = true, .parentPrimaryKey = ID_LOCAL, .parentClass = &localModel
+        },
+        {
+            .fieldName = "id_local_final", .alias = "Id Local Final", .sizeBytes = SHORT_SIZE, .type = SHORT,
+            .required = true, .unique = false, .foreignKey = true, .parentPrimaryKey = ID_LOCAL, .parentClass = &localModel
+        },
+        {
+            .fieldName = "lugares_disponiveis", .alias = "Lugares Disponiveis", .sizeBytes = SHORT_SIZE, .type = SHORT,
+            .unique = false,
+            .required = true
+        },
+        {
+            .fieldName = "duracao_estimada", .alias = "Duração Estimada", . sizeBytes =FLOAT_SIZE, .type = FLOAT,
+            .required = true
+        },
+        {
+            .fieldName = "custo_viajante", .alias = "Custo Viajante", . sizeBytes = FLOAT_SIZE, .type = FLOAT,
+            .required = true
+        },
+        {
+            .fieldName = "id_conforto", .alias = "Id Conforto", .sizeBytes = SHORT_SIZE, .type = SHORT,
+            .required = true, .unique = false, .foreignKey = true, .parentPrimaryKey = ID_CONFORTO, .parentClass = &confortoModel
+        },
+        {
+            .fieldName = "id_estado", .alias = "Id Estado", .sizeBytes = SHORT_SIZE, .type = SHORT,
+            .required = true, .unique = false, .foreignKey = true, .parentPrimaryKey = ID_ESTADO, .parentClass = &estadoModel
+        },
+        {
+            .fieldName = "data_saida", .alias = "Data Saída", .sizeBytes = DATE_SIZE, .type = DATE,
+            .required = true, .unique = false,
+        }
+    };
+
+
+
+    //Data
+    Viagem viagemData[MAX_VIAGENS];
+
+    //Numero de campos que o tipo de viagem tem
+    const unsigned int viagemFieldsNumber = (sizeof (viagemFields) / sizeof (viagemFields[0]));
+    //Tamanho da estrutura
+    const unsigned int tamViagem = sizeof (Viagem);
+
+    ViagemModel(&viagemModel, viagemFields, viagemFieldsNumber, tamViagem, viagemData, &contadorViagem);
+
+    readFile(&viagemModel, MAX_VIAGENS);
+
+    //postViagem(&viagemModel); 
+    //getAllViagem(&viagemModel);
+    //putViagem(&viagemModel, 0);
+    //getShowViagem(&viagemModel, 0);
+    //deleteViagem(&viagemModel,0);
+
+
 
     //---------------------------------------------------------------------------------------------------------//
 

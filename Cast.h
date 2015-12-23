@@ -14,7 +14,8 @@ extern "C" {
 
 
 
-    char *castString(const void *s);
+    char * castString(const void *s);
+    char castChar(const void *c);
     int castInt(const void *i);
     short castShort(const void *sh);
     unsigned int castUnsignedInt(const void *ui);

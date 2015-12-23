@@ -12,8 +12,6 @@
 extern "C" {
 #endif
 #include <string.h>
-
-#include "Utils.h"
 #include "AbstractDataTypes.h"
 
     typedef struct {

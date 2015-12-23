@@ -34,26 +34,31 @@ extern "C" {
      *Interface implementation ( not completed )
      */
 
-    typedef struct {
-        void (*listRegistry)(void *, FieldAux *, unsigned);
-        void (*fullList)(void *, const unsigned short, const unsigned int, FieldAux *, const unsigned int);
-        void (*parsedList)(void *, const unsigned short, FieldAux *, int *, unsigned, int *, unsigned);
-    } List;
+    //    typedef struct {
+    //        void (*listRegistry)(void *, FieldAux *, unsigned);
+    //        void (*fullList)(void *, const unsigned short, const unsigned int, FieldAux *, const unsigned int);
+    //        void (*parsedList)(void *, const unsigned short, FieldAux *, int *, unsigned, int *, unsigned);
+    //    } List;
+    //
+    //    typedef struct {
+    //        void(*fullRead)(RequestType, const unsigned short, void *, const unsigned int, FieldAux *, const unsigned int);
+    //        void(*parsedRead)(RequestType, void *, FieldAux *, int *, unsigned, int *, unsigned);
+    //        void(*readRegistry)(RequestType, void *, FieldAux *, unsigned);
+    //
+    //    } Read;
+    //
+    //    typedef struct {
+    //        void (*create)(Model * model) ;
+    //        Read read;
+    //        void (*update)();
+    //        void (*delete)();
+    //        List list;
+    //    } crud;
 
-    typedef struct {
-        void(*fullRead)(RequestType, const unsigned short, void *, const unsigned int, FieldAux *, const unsigned int);
-        void(*parsedRead)(RequestType, void *, FieldAux *, int *, unsigned, int *, unsigned);
-        void(*readRegistry)(RequestType, void *, FieldAux *, unsigned);
+    void create(Model * model);
+    void update(Model * model, const unsigned short index);
+    void delete(Model *model, const unsigned short index);
 
-    } Read;
-
-    typedef struct {
-        void (*create)(const unsigned short stuctTypeSize, void * list, int *contador, FieldAux *aux, const unsigned int fieldsNumber);
-        Read read;
-        void (*update)();
-        void (*delete)();
-        List list;
-    } crud;
 
 #ifdef	__cplusplus
 }

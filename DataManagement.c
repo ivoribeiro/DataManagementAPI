@@ -20,8 +20,6 @@ void setField(DataType fieldType, void * field, void *value) {
     }
 }
 
-
-
 /**
  * This method checks if already exists a given value in a Class data (table) atribute (field) 
  * @param field
@@ -55,28 +53,25 @@ bool checkUniqueField(const unsigned int field, void *searchValue, void * list, 
  * @param aux
  * @param fieldsNumber
  */
-void create(Model * class) {
-    fullRead(class, CREATE, (*class->elements));
-    (*class->elements)++;
+void create(Model * model) {
+    fullRead(model, CREATE, (*model->elements));
+    (*model->elements)++;
 
 }
 
-void update() {
-};
+void update(Model * model, const unsigned short index) {
+    fullRead(model, UPDATE, index);
+}
 
-void delete() {
-};
-
-
-/*Function not implemented*/
-
-void removeKey(Model *class, const unsigned short key) {
+void delete(Model *model, const unsigned short index) {
     unsigned short i;
-    for (i = key; i < (*class->elements) - 1; i++) {
-        memcpy(elementMemoryAdress(class->data, class->StructTypeSize, i), elementMemoryAdress(class->data, class->StructTypeSize, i + 1), class->StructTypeSize);
+    for (i = index; i < (*model->elements) - 1; i++) {
+        memcpy(elementMemoryAdress(model->data, model->StructTypeSize, i), elementMemoryAdress(model->data, model->StructTypeSize, i + 1), model->StructTypeSize);
     }
-    (*class->elements)--;
-}
+    (*model->elements)--;
+};
+
+
 
 
 

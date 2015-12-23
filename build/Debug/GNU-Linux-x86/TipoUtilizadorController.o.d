@@ -1,13 +1,18 @@
 build/Debug/GNU-Linux-x86/TipoUtilizadorController.o: \
- TipoUtilizadorController.c DataManagement.h DataTypes.h \
- AbstractDataTypes.h Cast.h Print.h Get.h Compare.h Search.h Time.h \
- List.h Memory.h Read.h Date.h TipoUtilizadorModel.h Utils.h
+ TipoUtilizadorController.c TipoUtilizadorController.h \
+ TipoUtilizadorModel.h AbstractDataTypes.h DataTypes.h DataManagement.h \
+ Cast.h Print.h Get.h Compare.h Search.h Time.h List.h Memory.h Read.h \
+ Date.h ReadADT.h
 
-DataManagement.h:
+TipoUtilizadorController.h:
+
+TipoUtilizadorModel.h:
+
+AbstractDataTypes.h:
 
 DataTypes.h:
 
-AbstractDataTypes.h:
+DataManagement.h:
 
 Cast.h:
 
@@ -29,6 +34,4 @@ Read.h:
 
 Date.h:
 
-TipoUtilizadorModel.h:
-
-Utils.h:
+ReadADT.h:

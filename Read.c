@@ -8,9 +8,11 @@
  * @param maxSize
  */
 void readString(void * field, const unsigned int maxSize) {
-    scanf("%[^\n]s", castString(field));
+    char* pChar;
+    pChar = (char*) field;
+    pChar = field;
+    scanf("%s", pChar);
     while (getchar() != '\n');
-
 };
 
 /**

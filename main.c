@@ -12,8 +12,12 @@
 
 
 #include "DataManagement.h"
+//---------TipoUtilizador------------
 #include "TipoUtilizadorModel.h"
 #include "TipoUtilizadorController.h"
+//---------Utilizador---------------
+#include "UtilizadorModel.h"
+#include "UtilizadorController.h"
 
 /*
  * 
@@ -24,114 +28,86 @@ int main(int argc, char** argv) {
 
     Model tipoUtilizadorModel;
 
-    //Fields
+    const unsigned int MAX_TIPO_UTILIZADORES = 5;
+    unsigned short contadorTipoUtilizador = 0;
+
+
+    //Campos TipoUtilizador
 
     FieldAux tipoUtilizadorFields[] = {
         {.fieldName = "id_tipo_utilizador", .alias = "Numero Tipo Utilizador", .sizeBytes = SHORT_SIZE, .type = SHORT, .unique = true, .required = true, .autoIncrement = true, .step = 1},
         {.fieldName = "descricao", .alias = "Descricao", .sizeBytes = SHORT_STRING, .type = STRING, .unique = false, .required = true}
     };
 
-
-    const unsigned int maxTipoUtilizador = 3;
-    unsigned short contadorTipoUtilizador = 1;
-
     //Data
-    TipoUtilizador tipoUtilizadorData[maxTipoUtilizador];
-
-    tipoUtilizadorData[0].id_tipo_utilizador = 1;
-    strcpy(tipoUtilizadorData[0].descricao, "Administrador");
-    tipoUtilizadorData[0].id_tipo_utilizador = 1;
-    strcpy(tipoUtilizadorData[0].descricao, "Administrador");
+    TipoUtilizador tipoUtilizadorData[MAX_TIPO_UTILIZADORES];
 
     //Numero de campos que o tipo de utilizador tem
-    const unsigned int fieldsNumber = (sizeof (tipoUtilizadorFields) / sizeof (tipoUtilizadorFields[0]));
+    const unsigned int tipoUtilizadorfieldsNumber = (sizeof (tipoUtilizadorFields) / sizeof (tipoUtilizadorFields[0]));
     //Tamanho da estrutura
-    const unsigned int tamTipoTipoUtilizador = sizeof (TipoUtilizador);
+    const unsigned int tamTipoUtilizador = sizeof (TipoUtilizador);
+
+    TipoUtilizadorModel(&tipoUtilizadorModel, tipoUtilizadorFields, tipoUtilizadorfieldsNumber, tamTipoUtilizador, tipoUtilizadorData, &contadorTipoUtilizador);
+
+    readFile(&tipoUtilizadorModel, MAX_TIPO_UTILIZADORES);
+
+    //postTipoUtilizador(&tipoUtilizadorModel); 
+    //getAllTipoUtilizador(&tipoUtilizadorModel);
+    //putTipoUtilizador(&tipoUtilizadorModel, 2);
+    //getShowTipoUtilizador(&tipoUtilizadorModel, 2);
+    //deleteTipoUtilizador(&tipoUtilizadorModel,2);
+
+    //---------------------------------------------------------------------------------------------------------//
 
 
-    TipoUtilizadorModel(&tipoUtilizadorModel, tipoUtilizadorFields, fieldsNumber, tamTipoTipoUtilizador, tipoUtilizadorData, &contadorTipoUtilizador);
-    printf("%u", tipoUtilizadorModel.fieldsNumber);
-    listarTipoUtilizadores(&tipoUtilizadorModel);
+    Model utilizadorModel;
 
-    //strcpy(NomeFicheiro, "tipoUtilizadores.txt");
-    //readFile(NomeFicheiro, &tipoUtilizadorClass, MAX_TIPO_UTILIZADORES);
+    const unsigned int MAX_UTILIZADORES = 30;
+    unsigned short contadorUtilizador = 0;
+
+
+    //Campos TipoUtilizador
+
+    FieldAux utilizadorFields[] = {
+        {.fieldName = "id_utilizador", .alias = "Numero Utilizador", .sizeBytes = SHORT_SIZE, .type = SHORT, .unique = true, .required = true, .autoIncrement = true, .step = 1},
+        {.fieldName = "id_tipo_utilizador", .alias = "Id Tipo de Utilizador", .sizeBytes = SHORT_SIZE, .type = SHORT, .required = true, .unique = false, .foreignKey = true, .parentPrimaryKey = ID_TIPO_UTILIZADOR, .parentClass = &tipoUtilizadorModel},
+        {.fieldName = "nome", .alias = "Nome", .sizeBytes = MEDIUM_STRING, .type = STRING, .unique = false, .required = true},
+        {.fieldName = "username", .alias = "Username", . sizeBytes = SHORT_STRING, .type = STRING, .required = true},
+        {.fieldName = "password", .alias = "Password", . sizeBytes = SHORT_STRING, .type = STRING, .required = true}
+
+    };
+
+
+
+    //Data
+    Utilizador utilizadorData[MAX_UTILIZADORES];
+
+    //Numero de campos que o tipo de utilizador tem
+    const unsigned int utilizadorFieldsNumber = (sizeof (utilizadorFields) / sizeof (utilizadorFields[0]));
+    //Tamanho da estrutura
+    const unsigned int tamUtilizador = sizeof (Utilizador);
+
+    UtilizadorModel(&utilizadorModel, utilizadorFields, utilizadorFieldsNumber, tamUtilizador, utilizadorData, &contadorUtilizador);
+
+    readFile(&utilizadorModel, MAX_UTILIZADORES);
+
+    //postUtilizador(&utilizadorModel); 
+    //getAllUtilizador(&utilizadorModel);
+    //putUtilizador(&utilizadorModel, 0);
+    //getShowUtilizador(&utilizadorModel, 0);
+    //deleteUtilizador(&utilizadorModel,0);
 
     //---------------------------------------------------------------------------------------------------------//
 
     typedef struct {
         Model * tipoUtilizadorModel;
+        Model * utilizadorModel;
+
     } Models;
 
     Models models;
     models.tipoUtilizadorModel = &tipoUtilizadorModel;
-
-
-    //Testes
-    //listarProducao_Encomenda_LinhaEncomenda(classes.producaoClass, classes.linhaEncomendaClass, classes.produtoFinalClass, classes.linhaProdutoFinalClass);
-
-    //menuLogin(&classes);
-    //unsigned short idCliente=2;
-    //listarEncomendasCompletasCliente(classes.encomendaClass,idCliente,classes.linhaEncomendaClass,classes.producaoClass); 
-    //---------------------------------------------------------------------------------------------------------//
-    //Checks
-    //inserirTipoUtilizador(classes.tipoUtilizadorClass);
-    //listarTipoUtilizadores(classes.tipoUtilizadorClass);
-
-    //listarTipoUtilizador(classes.tipoUtilizadorClass,0);
-    //int chaves[] = {0, 1};
-    //int campos[] = {ID_TIPO_UTILIZADOR, DESCRICAO_TIPO_UTILIZADOR};
-    //filtrarTipoUtilizadores(classes.tipoUtilizadorClass, chaves, 2, campos, 2);
-    //filtrarTipoUtilizador(classes.tipoUtilizadorClass,0,campos,2);
-    //filtrarEditarTipoUtilizador(classes.tipoUtilizadorClass,0,campos,2);
-    //editarTipoUtilizador(classes.tipoUtilizadorClass,1);
-    //listar_editar_tipoUtilizadores(classes.tipoUtilizadorClass);
-    //editarTipoUtilizadores(classes.tipoUtilizadorClass,chaves,2);
-    //TipoUtilizador *tipoUtilizadorData = classes.tipoUtilizadorClass->data;
-    //removerTipoUtilizador(classes.tipoUtilizadorClass, 2);
-    //listarTipoUtilizadores(classes.tipoUtilizadorClass);
-
-    //inserirUtilizador(classes.utilizadorClass);
-    //listarUtilizadores(classes.utilizadorClass);
-    // (*classes.utilizadorClass->elements)=0;
-    // listarUtilizador(classes.utilizadorClass, 0);
-    //listar_editar_utilizadores(classes.utilizadorClass);
-    //printShort(classes.utilizadorClass->elements);
-
-    //inserirCliente(classes.clienteClass);
-    //removerCliente(classes.clienteClass,1);
-    //listarClientes(classes.clienteClass);
-
-
-    // inserirIngrediente(classes.ingredienteClass);
-    //listarIngredientes(classes.ingredienteClass);
-
-    //inserirProdutoFinal(classes.produtoFinalClass);
-    //listarProdutosFinais(classes.produtoFinalClass);
-
-    // inserirLinhaProdutoFinal(classes.linhaProdutoFinalClass);
-    //listarLinhaProdutosFinais(classes.linhaProdutoFinalClass);
-
-    // inserirEncomenda(classes.encomendaClass);
-    //listarEncomendas(classes.encomendaClass);
-
-    // inserirLinhaEncomenda(classes.linhaEncomendaClass);
-    // listarLinhaEncomendas(classes.linhaEncomendaClass);
-
-
-    //inserirProducao(classes.producaoClass);
-    //printShort(classes.producaoClass->elements);
-    //listarProducoes(classes.producaoClass);
-
-    //listarProdutosFinais_LinhasProdutoFinal(classes.produtoFinalClass,classes.linhaProdutoFinalClass);
-    //listarProdutoFinal_LinhasProdutoFinal(classes.produtoFinalClass,classes.linhaProdutoFinalClass,0);
-
-    // listar_Encomenda_linhaEncomenda_producao(classes.encomendaClass,classes.linhaEncomendaClass,classes.producaoClass);
-
-    //listarProducao_Encomenda_LinhaEncomenda(classes.producaoClass,classes.linhaEncomendaClass,classes.produtoFinalClass,classes.linhaProdutoFinalClass);
-
-
-    //time_t time=getUnixTime();
-    //convertDate(&time);
+    models.utilizadorModel = &utilizadorModel;
 
 
 

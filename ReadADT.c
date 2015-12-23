@@ -116,7 +116,7 @@ void parsedRead(Model *class, RequestType rtype, int *elements, unsigned element
     unsigned int i = 0, j = 0;
     for (i = 0; i < elementsNumber; i++) {
         for (j = 0; j < fieldsNumber; j++) {
-            readRegistry(class, rtype, elementMemoryAdress(class->data, class->StructTypeSize, elements[i]), fields[j]);
+            readRegistry(class, rtype,class->data + (class->StructTypeSize * elements[i]), fields[j]);
         }
         puts("---------------------------------------------");
     }
@@ -140,9 +140,8 @@ void singleParsedRead(Model *class, RequestType rtype, const unsigned int elemen
 void fullRead(Model * class, RequestType rType, const unsigned short element) {
     unsigned int j = 0;
     for (j = 0; j < class->fieldsNumber; j++) {
-        readRegistry(class, rType, elementMemoryAdress(class->data, class->StructTypeSize, element), j);
+        readRegistry(class, rType, class->data + (class->StructTypeSize * element), j);
     }
-    puts("---------------------------------------------");
 }
 
 /*End of read Functions*/

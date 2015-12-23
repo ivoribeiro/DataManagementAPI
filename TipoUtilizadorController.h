@@ -11,7 +11,9 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-
+#include "TipoUtilizadorModel.h"
+#include "DataManagement.h"
+#include "ReadADT.h"
 
 
 

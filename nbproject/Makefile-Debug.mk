@@ -48,6 +48,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/Time.o \
 	${OBJECTDIR}/TipoUtilizadorController.o \
 	${OBJECTDIR}/TipoUtilizadorModel.o \
+	${OBJECTDIR}/UtilizadorController.o \
+	${OBJECTDIR}/UtilizadorModel.o \
 	${OBJECTDIR}/Utils.o \
 	${OBJECTDIR}/file.o \
 	${OBJECTDIR}/main.o \
@@ -142,6 +144,16 @@ ${OBJECTDIR}/TipoUtilizadorModel.o: TipoUtilizadorModel.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TipoUtilizadorModel.o TipoUtilizadorModel.c
+
+${OBJECTDIR}/UtilizadorController.o: UtilizadorController.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/UtilizadorController.o UtilizadorController.c
+
+${OBJECTDIR}/UtilizadorModel.o: UtilizadorModel.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/UtilizadorModel.o UtilizadorModel.c
 
 ${OBJECTDIR}/Utils.o: Utils.c 
 	${MKDIR} -p ${OBJECTDIR}

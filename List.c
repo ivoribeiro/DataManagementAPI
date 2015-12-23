@@ -2,7 +2,7 @@
 
 /*List Functions*/
 
-void singleParsedList(Model *class, const unsigned int key, int *fields, unsigned fieldsNumber) ;
+void singleParsedList(Model *class, const unsigned int key, int *fields, unsigned fieldsNumber);
 
 void listSubStruct(FieldAux *mainAux, const unsigned short field, void *reg) {
     unsigned short j;
@@ -59,11 +59,7 @@ void listRegistry(void * reg, FieldAux *aux, unsigned field) {
         listSubStruct(aux, i, reg);
 
     }
-    puts("");
 }
-
-
-
 
 /**
  * This method does a full (full elements(keys) + full atributes(fields)) list of a given Class data
@@ -78,16 +74,22 @@ void fullList(Model *class) {
     unsigned int i = 0, j = 0;
     FieldAux *aux = class->auxStruct;
     for (i = 0; i < *(class->elements); i++) {
-        puts("---------------------------------------------");
+        puts("");
+        puts("---------------------");
         for (j = 0; j < class->fieldsNumber; j++) {
-
+            puts("");
             if (aux[j].foreignKey != true) {
                 printString(aux[j].alias);
             }
             listRegistry(elementMemoryAdress(class->data, class->StructTypeSize, i), aux, j);
+            puts("");
         }
-        puts("---------------------------------------------");
+
     }
+    puts("---------------------");
+    puts("");
+
+
 }
 
 /**

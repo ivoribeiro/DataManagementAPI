@@ -18,6 +18,7 @@ char *castString(const void *s) {
     return val;
 }
 
+
 /**
  * 
  * @param s - Memory adress of variable to make cast to char

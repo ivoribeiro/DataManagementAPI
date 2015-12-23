@@ -5,12 +5,14 @@
                    displayName="Header Files"
                    projectFiles="true">
       <logicalFolder name="f1" displayName="controllers" projectFiles="true">
+        <itemPath>ConfortoController.h</itemPath>
         <itemPath>LocalController.h</itemPath>
         <itemPath>TipoUtilizadorController.h</itemPath>
         <itemPath>UtilizadorController.h</itemPath>
         <itemPath>ViagemController.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f2" displayName="models" projectFiles="true">
+        <itemPath>ConfortoModel.h</itemPath>
         <itemPath>LocalModel.h</itemPath>
         <itemPath>TipoUtilizadorModel.h</itemPath>
         <itemPath>UtilizadorModel.h</itemPath>
@@ -44,6 +46,7 @@
         <logicalFolder name="f4" displayName="config" projectFiles="true">
         </logicalFolder>
         <logicalFolder name="f2" displayName="controllers" projectFiles="true">
+          <itemPath>ConfortoController.c</itemPath>
           <itemPath>LocalController.c</itemPath>
           <itemPath>TipoUtilizadorController.c</itemPath>
           <itemPath>UtilizadorController.c</itemPath>
@@ -56,6 +59,7 @@
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="f1" displayName="models" projectFiles="true">
+          <itemPath>ConfortoModel.c</itemPath>
           <itemPath>LocalModel.c</itemPath>
           <itemPath>TipoUtilizadorModel.c</itemPath>
           <itemPath>UtilizadorModel.c</itemPath>
@@ -121,6 +125,14 @@
       <item path="Compare.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Compare.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ConfortoController.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ConfortoController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ConfortoModel.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ConfortoModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DataManagement.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -236,6 +248,14 @@
       <item path="Compare.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Compare.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ConfortoController.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ConfortoController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ConfortoModel.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="ConfortoModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="DataManagement.c" ex="false" tool="0" flavor2="0">
       </item>

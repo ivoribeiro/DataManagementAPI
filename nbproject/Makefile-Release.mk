@@ -37,6 +37,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Cast.o \
 	${OBJECTDIR}/Compare.o \
+	${OBJECTDIR}/ConfortoController.o \
+	${OBJECTDIR}/ConfortoModel.o \
 	${OBJECTDIR}/DataManagement.o \
 	${OBJECTDIR}/Get.o \
 	${OBJECTDIR}/List.o \
@@ -93,6 +95,16 @@ ${OBJECTDIR}/Compare.o: Compare.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Compare.o Compare.c
+
+${OBJECTDIR}/ConfortoController.o: ConfortoController.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ConfortoController.o ConfortoController.c
+
+${OBJECTDIR}/ConfortoModel.o: ConfortoModel.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ConfortoModel.o ConfortoModel.c
 
 ${OBJECTDIR}/DataManagement.o: DataManagement.c 
 	${MKDIR} -p ${OBJECTDIR}

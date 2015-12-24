@@ -8,6 +8,7 @@
         <itemPath>ConfortoController.h</itemPath>
         <itemPath>EstadoController.h</itemPath>
         <itemPath>LocalController.h</itemPath>
+        <itemPath>RoleController.h</itemPath>
         <itemPath>TipoUtilizadorController.h</itemPath>
         <itemPath>UtilizadorController.h</itemPath>
         <itemPath>ViagemController.h</itemPath>
@@ -16,6 +17,7 @@
         <itemPath>ConfortoModel.h</itemPath>
         <itemPath>EstadoModel.h</itemPath>
         <itemPath>LocalModel.h</itemPath>
+        <itemPath>RoleModel.h</itemPath>
         <itemPath>TipoUtilizadorModel.h</itemPath>
         <itemPath>UtilizadorModel.h</itemPath>
         <itemPath>ViagemModel.h</itemPath>
@@ -51,6 +53,7 @@
           <itemPath>ConfortoController.c</itemPath>
           <itemPath>EstadoController.c</itemPath>
           <itemPath>LocalController.c</itemPath>
+          <itemPath>RoleController.c</itemPath>
           <itemPath>TipoUtilizadorController.c</itemPath>
           <itemPath>UtilizadorController.c</itemPath>
           <itemPath>ViagemController.c</itemPath>
@@ -65,6 +68,7 @@
           <itemPath>ConfortoModel.c</itemPath>
           <itemPath>EstadoModel.c</itemPath>
           <itemPath>LocalModel.c</itemPath>
+          <itemPath>RoleModel.c</itemPath>
           <itemPath>TipoUtilizadorModel.c</itemPath>
           <itemPath>UtilizadorModel.c</itemPath>
           <itemPath>ViagemModel.c</itemPath>
@@ -185,6 +189,14 @@
       <item path="ReadADT.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="ReadADT.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RoleController.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="RoleController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RoleModel.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="RoleModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Search.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -316,6 +328,14 @@
       <item path="ReadADT.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="ReadADT.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RoleController.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="RoleController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="RoleModel.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="RoleModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Search.c" ex="false" tool="0" flavor2="0">
       </item>

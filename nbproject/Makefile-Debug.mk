@@ -50,6 +50,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/Print.o \
 	${OBJECTDIR}/Read.o \
 	${OBJECTDIR}/ReadADT.o \
+	${OBJECTDIR}/RoleController.o \
+	${OBJECTDIR}/RoleModel.o \
 	${OBJECTDIR}/Search.o \
 	${OBJECTDIR}/Time.o \
 	${OBJECTDIR}/TipoUtilizadorController.o \
@@ -162,6 +164,16 @@ ${OBJECTDIR}/ReadADT.o: ReadADT.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ReadADT.o ReadADT.c
+
+${OBJECTDIR}/RoleController.o: RoleController.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/RoleController.o RoleController.c
+
+${OBJECTDIR}/RoleModel.o: RoleModel.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/RoleModel.o RoleModel.c
 
 ${OBJECTDIR}/Search.o: Search.c 
 	${MKDIR} -p ${OBJECTDIR}

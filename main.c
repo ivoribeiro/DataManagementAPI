@@ -18,9 +18,21 @@
 //---------Utilizador---------------
 #include "UtilizadorModel.h"
 #include "UtilizadorController.h"
+//---------Local---------------
+#include "LocalModel.h"
+#include "LocalController.h"
+//---------Conforto---------------
+#include "ConfortoModel.h"
+#include "ConfortoController.h"
 //---------Viagem---------------
 #include "ViagemModel.h"
 #include "ViagemController.h"
+//---------Estado---------------
+#include "EstadoModel.h"
+#include "EstadoController.h"
+//---------Role---------------
+#include "RoleModel.h"
+#include "RoleController.h"
 
 /*
  * 
@@ -62,7 +74,6 @@ int main(int argc, char** argv) {
 
     //---------------------------------------------------------------------------------------------------------//
 
-
     Model utilizadorModel;
 
     const unsigned int MAX_UTILIZADORES = 30;
@@ -79,8 +90,6 @@ int main(int argc, char** argv) {
         {.fieldName = "password", .alias = "Password", . sizeBytes = SHORT_STRING, .type = STRING, .required = true}
 
     };
-
-
 
     //Data
     Utilizador utilizadorData[MAX_UTILIZADORES];
@@ -101,6 +110,104 @@ int main(int argc, char** argv) {
     //deleteUtilizador(&utilizadorModel,0);
 
 
+    //---------------------------------------------------------------------------------------------------------//
+
+    Model localModel;
+
+    const unsigned int MAX_LOCAIS = 30;
+    unsigned short contadorLocais = 0;
+
+
+    //Campos TipoUtilizador
+
+    FieldAux localFields[] = {
+        {.fieldName = "id_local", .alias = "Numero Local", .sizeBytes = SHORT_SIZE, .type = SHORT, .unique = true, .required = true, .autoIncrement = true, .step = 1},
+        {.fieldName = "nome", .alias = "Nome", .sizeBytes = SHORT_STRING, .type = STRING, .unique = false, .required = true}
+    };
+
+    //Data
+    Local localData[MAX_LOCAIS];
+
+    //Numero de campos que o local tem
+    const unsigned int localfieldsNumber = (sizeof (localFields) / sizeof (localFields[0]));
+    //Tamanho da estrutura
+    const unsigned int tamLocal = sizeof (Local);
+
+    LocalModel(&localModel, localFields, localfieldsNumber, tamLocal, localData, &contadorLocais);
+
+    readFile(&localModel, MAX_LOCAIS);
+
+    //postLocal(&localModel); 
+    //getAllLocal(&localModel);
+    //putLocal(&localModel, 2);
+    //getShowLocal(&localModel, 2);
+    //deleteLocal(&localModel,2);
+
+    //---------------------------------------------------------------------------------------------------------//
+
+    Model confortoModel;
+
+    const unsigned int MAX_CONFORTOS = 30;
+    unsigned short contadorConforto = 0;
+
+
+    //Campos TipoUtilizador
+
+    FieldAux confortoFields[] = {
+        {.fieldName = "id_conforto", .alias = "Numero Conforto", .sizeBytes = SHORT_SIZE, .type = SHORT, .unique = true, .required = true, .autoIncrement = true, .step = 1},
+        {.fieldName = "descricao", .alias = "Descrição", .sizeBytes = SHORT_STRING, .type = STRING, .unique = false, .required = true}
+    };
+
+    //Data
+    Conforto confortoData[MAX_CONFORTOS];
+
+    //Numero de campos que o conforto tem
+    const unsigned int confortofieldsNumber = (sizeof (confortoFields) / sizeof (confortoFields[0]));
+    //Tamanho da estrutura
+    const unsigned int tamConforto = sizeof (Conforto);
+
+    ConfortoModel(&confortoModel, confortoFields, confortofieldsNumber, tamConforto, confortoData, &contadorConforto);
+
+    readFile(&confortoModel, MAX_CONFORTOS);
+
+    //postConforto(&confortoModel); 
+    //getAllConforto(&confortoModel);
+    //putConforto(&confortoModel, 2);
+    //getShowConforto(&confortoModel, 2);
+    //deleteConforto(&confortoModel,2);
+
+    //---------------------------------------------------------------------------------------------------------//
+
+    Model estadoModel;
+
+    const unsigned int MAX_ESTADO = 30;
+    unsigned short contadorEstado = 0;
+
+
+    //Campos Estado
+
+    FieldAux estadoFields[] = {
+        {.fieldName = "id_estado", .alias = "Numero Estado", .sizeBytes = SHORT_SIZE, .type = SHORT, .unique = true, .required = true, .autoIncrement = true, .step = 1},
+        {.fieldName = "descricao", .alias = "Descrição", .sizeBytes = SHORT_STRING, .type = STRING, .unique = false, .required = true}
+    };
+
+    //Data
+    Estado estadoData[MAX_ESTADO];
+
+    //Numero de campos que o estado tem
+    const unsigned int estadofieldsNumber = (sizeof (estadoFields) / sizeof (estadoFields[0]));
+    //Tamanho da estrutura
+    const unsigned int tamEstado = sizeof (Estado);
+
+    EstadoModel(&estadoModel, estadoFields, estadofieldsNumber, tamEstado, estadoData, &contadorEstado);
+
+    readFile(&estadoModel, MAX_ESTADO);
+
+    //postEstado(&estadoModel); 
+    //getAllEstado(&estadoModel);
+    //putEstado(&estadoModel, 2);
+    //getShowEstado(&estadoModel, 2);
+    //deleteEstado(&estadoModel,2);
     //---------------------------------------------------------------------------------------------------------//
 
     Model viagemModel;
@@ -130,7 +237,7 @@ int main(int argc, char** argv) {
             .required = true
         },
         {
-            .fieldName = "duracao_estimada", .alias = "Duração Estimada", . sizeBytes =FLOAT_SIZE, .type = FLOAT,
+            .fieldName = "duracao_estimada", .alias = "Duração Estimada", . sizeBytes = FLOAT_SIZE, .type = FLOAT,
             .required = true
         },
         {
@@ -151,8 +258,6 @@ int main(int argc, char** argv) {
         }
     };
 
-
-
     //Data
     Viagem viagemData[MAX_VIAGENS];
 
@@ -170,7 +275,6 @@ int main(int argc, char** argv) {
     //putViagem(&viagemModel, 0);
     //getShowViagem(&viagemModel, 0);
     //deleteViagem(&viagemModel,0);
-
 
 
     //---------------------------------------------------------------------------------------------------------//

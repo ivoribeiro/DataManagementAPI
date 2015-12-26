@@ -35,6 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/AlertaController.o \
+	${OBJECTDIR}/AlertaModel.o \
 	${OBJECTDIR}/Cast.o \
 	${OBJECTDIR}/Compare.o \
 	${OBJECTDIR}/ConfortoController.o \
@@ -91,6 +93,16 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/datamanagementapi: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/datamanagementapi ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/AlertaController.o: AlertaController.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AlertaController.o AlertaController.c
+
+${OBJECTDIR}/AlertaModel.o: AlertaModel.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AlertaModel.o AlertaModel.c
 
 ${OBJECTDIR}/Cast.o: Cast.c 
 	${MKDIR} -p ${OBJECTDIR}

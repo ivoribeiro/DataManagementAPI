@@ -1,7 +1,4 @@
 
-
-
-
 #include "TipoAlertaController.h"
 
 void guardarTipoAlerta(Model *tipoAlertaModel) {
@@ -19,7 +16,7 @@ void getAllTipoAlerta(Model *tipoAlertaModel) {
 
 void getShowTipoAlerta(Model *tipoAlertaModel, const unsigned int indice) {
     puts("|---------------|");
-    puts("|TipoAlerta|");
+    puts("|Tipo de alerta|");
     puts("|---------------|");
     singleList(tipoAlertaModel, indice);
     puts("|---------------|");
@@ -36,7 +33,7 @@ void postTipoAlerta(Model *tipoAlertaModel) {
         puts("|--------------------|");
         create(tipoAlertaModel);
         puts("|--------------------|");
-        puts("TipoAlerta criado com sucesso Obrigado");
+        puts("Tipo de alerta criado com sucesso Obrigado");
         guardarTipoAlerta(tipoAlertaModel);
     } else puts("Regressar ao menu gestao de tipoAlerta");
 
@@ -48,9 +45,8 @@ void putTipoAlerta(Model *tipoAlertaModel, const unsigned int indice) {
     puts("|----------------------|");
     update(tipoAlertaModel, indice);
     puts("|----------------------|");
-    puts("TipoAlerta editado com sucesso Obrigado");
+    puts("Tipo de alerta editado com sucesso Obrigado");
     guardarTipoAlerta(tipoAlertaModel);
-
 }
 
 void deleteTipoAlerta(Model *tipoAlertaModel, const unsigned short indice) {

@@ -53,7 +53,9 @@ OBJECTFILES= \
 	${OBJECTDIR}/RoleController.o \
 	${OBJECTDIR}/RoleModel.o \
 	${OBJECTDIR}/Search.o \
+	${OBJECTDIR}/TIpoAlertaModel.o \
 	${OBJECTDIR}/Time.o \
+	${OBJECTDIR}/TipoAlertaController.o \
 	${OBJECTDIR}/TipoUtilizadorController.o \
 	${OBJECTDIR}/TipoUtilizadorModel.o \
 	${OBJECTDIR}/UtilizadorController.o \
@@ -180,10 +182,20 @@ ${OBJECTDIR}/Search.o: Search.c
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Search.o Search.c
 
+${OBJECTDIR}/TIpoAlertaModel.o: TIpoAlertaModel.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TIpoAlertaModel.o TIpoAlertaModel.c
+
 ${OBJECTDIR}/Time.o: Time.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Time.o Time.c
+
+${OBJECTDIR}/TipoAlertaController.o: TipoAlertaController.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TipoAlertaController.o TipoAlertaController.c
 
 ${OBJECTDIR}/TipoUtilizadorController.o: TipoUtilizadorController.c 
 	${MKDIR} -p ${OBJECTDIR}

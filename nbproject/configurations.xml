@@ -9,6 +9,7 @@
         <itemPath>EstadoController.h</itemPath>
         <itemPath>LocalController.h</itemPath>
         <itemPath>RoleController.h</itemPath>
+        <itemPath>TipoAlertaController.h</itemPath>
         <itemPath>TipoUtilizadorController.h</itemPath>
         <itemPath>UtilizadorController.h</itemPath>
         <itemPath>ViagemController.h</itemPath>
@@ -18,26 +19,29 @@
         <itemPath>EstadoModel.h</itemPath>
         <itemPath>LocalModel.h</itemPath>
         <itemPath>RoleModel.h</itemPath>
+        <itemPath>TipoAlertaModel.h</itemPath>
         <itemPath>TipoUtilizadorModel.h</itemPath>
         <itemPath>UtilizadorModel.h</itemPath>
         <itemPath>ViagemModel.h</itemPath>
       </logicalFolder>
-      <itemPath>AbstractDataTypes.h</itemPath>
-      <itemPath>Cast.h</itemPath>
-      <itemPath>Compare.h</itemPath>
-      <itemPath>DataManagement.h</itemPath>
-      <itemPath>DataTypes.h</itemPath>
-      <itemPath>Date.h</itemPath>
-      <itemPath>Get.h</itemPath>
-      <itemPath>List.h</itemPath>
-      <itemPath>Memory.h</itemPath>
-      <itemPath>Print.h</itemPath>
-      <itemPath>Read.h</itemPath>
-      <itemPath>ReadADT.h</itemPath>
-      <itemPath>Search.h</itemPath>
-      <itemPath>Time.h</itemPath>
-      <itemPath>Utils.h</itemPath>
-      <itemPath>file.h</itemPath>
+      <logicalFolder name="f3" displayName="vendor" projectFiles="true">
+        <itemPath>AbstractDataTypes.h</itemPath>
+        <itemPath>Cast.h</itemPath>
+        <itemPath>Compare.h</itemPath>
+        <itemPath>DataManagement.h</itemPath>
+        <itemPath>DataTypes.h</itemPath>
+        <itemPath>Date.h</itemPath>
+        <itemPath>Get.h</itemPath>
+        <itemPath>List.h</itemPath>
+        <itemPath>Memory.h</itemPath>
+        <itemPath>Print.h</itemPath>
+        <itemPath>Read.h</itemPath>
+        <itemPath>ReadADT.h</itemPath>
+        <itemPath>Search.h</itemPath>
+        <itemPath>Time.h</itemPath>
+        <itemPath>Utils.h</itemPath>
+        <itemPath>file.h</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -54,6 +58,7 @@
           <itemPath>EstadoController.c</itemPath>
           <itemPath>LocalController.c</itemPath>
           <itemPath>RoleController.c</itemPath>
+          <itemPath>TipoAlertaController.c</itemPath>
           <itemPath>TipoUtilizadorController.c</itemPath>
           <itemPath>UtilizadorController.c</itemPath>
           <itemPath>ViagemController.c</itemPath>
@@ -69,6 +74,7 @@
           <itemPath>EstadoModel.c</itemPath>
           <itemPath>LocalModel.c</itemPath>
           <itemPath>RoleModel.c</itemPath>
+          <itemPath>TIpoAlertaModel.c</itemPath>
           <itemPath>TipoUtilizadorModel.c</itemPath>
           <itemPath>UtilizadorModel.c</itemPath>
           <itemPath>ViagemModel.c</itemPath>
@@ -202,9 +208,17 @@
       </item>
       <item path="Search.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="TIpoAlertaModel.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="Time.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Time.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TipoAlertaController.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="TipoAlertaController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TipoAlertaModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="TipoUtilizadorController.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -341,9 +355,17 @@
       </item>
       <item path="Search.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="TIpoAlertaModel.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="Time.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Time.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TipoAlertaController.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="TipoAlertaController.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="TipoAlertaModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="TipoUtilizadorController.c" ex="false" tool="0" flavor2="0">
       </item>

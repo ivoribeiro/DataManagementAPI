@@ -111,8 +111,9 @@ void parsedList(Model *class, int *elements, unsigned elementsNumber, int *field
                 printString(aux[fields[j]].alias);
             }
             listRegistry(elementMemoryAdress(class->data, class->StructTypeSize, elements[i]), aux, fields[j]);
+            puts("");
         }
-        //puts("---------------------------------------------");
+
     }
 }
 
@@ -139,10 +140,13 @@ void singleList(Model *class, const unsigned int key) {
     int keys[] = {key};
     int fields[class->fieldsNumber];
     unsigned int i;
+    puts("");
     for (i = 0; i < class->fieldsNumber; i++) {
         fields[i] = i;
     }
     parsedList(class, keys, 1, fields, class->fieldsNumber);
+    puts("");
+
 }
 
 /*End of list Functions*/

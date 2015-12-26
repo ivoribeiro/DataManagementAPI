@@ -10,7 +10,7 @@ void guardarEstado(Model *estadoModel) {
 
 void getAllEstado(Model *estadoModel) {
     puts("|-------------------|");
-    puts("|Estados|");
+    puts("|-------Estados-----|");
     puts("|-------------------|");
     fullList(estadoModel);
     puts("|-------------------|");
@@ -19,7 +19,7 @@ void getAllEstado(Model *estadoModel) {
 
 void getShowEstado(Model *estadoModel, const unsigned int indice) {
     puts("|---------------|");
-    puts("|Estado|");
+    puts("|-----Estado----|");
     puts("|---------------|");
     singleList(estadoModel, indice);
     puts("|---------------|");
@@ -32,7 +32,7 @@ void postEstado(Model *estadoModel) {
     readChar(&resposta);
     if (resposta == 'Y' || resposta == 'y') {
         puts("|--------------------|");
-        puts("|Novo Estado|");
+        puts("|-----Novo Estado----|");
         puts("|--------------------|");
         create(estadoModel);
         puts("|--------------------|");
@@ -44,7 +44,7 @@ void postEstado(Model *estadoModel) {
 
 void putEstado(Model *estadoModel, const unsigned int indice) {
     puts("|----------------------|");
-    puts("|Editar Estado|");
+    puts("|----Editar Estado-----|");
     puts("|----------------------|");
     update(estadoModel, indice);
     puts("|----------------------|");

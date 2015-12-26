@@ -7,7 +7,7 @@ void guardarViagem(Model *viagemModel) {
 
 void getAllViagem(Model *viagemModel) {
     puts("|-------------------|");
-    puts("|Viagens|");
+    puts("|-----Viagens-------|");
     puts("|-------------------|");
     fullList(viagemModel);
     puts("|-------------------|");
@@ -16,7 +16,7 @@ void getAllViagem(Model *viagemModel) {
 
 void getShowViagem(Model *viagemModel, const unsigned int indice) {
     puts("|---------------|");
-    puts("|Viagem|");
+    puts("|-----Viagem----|");
     puts("|---------------|");
     singleList(viagemModel, indice);
     puts("|---------------|");
@@ -29,7 +29,7 @@ void postViagem(Model *viagemModel) {
     readChar(&resposta);
     if (resposta == 'Y' || resposta == 'y') {
         puts("|--------------------|");
-        puts("|Novo Viagem|");
+        puts("|-----Novo Viagem----|");
         puts("|--------------------|");
         create(viagemModel);
         puts("|--------------------|");
@@ -41,7 +41,7 @@ void postViagem(Model *viagemModel) {
 
 void putViagem(Model *viagemModel, const unsigned int indice) {
     puts("|----------------------|");
-    puts("|Editar Viagem|");
+    puts("|----Editar Viagem-----|");
     puts("|----------------------|");
     update(viagemModel, indice);
     puts("|----------------------|");

@@ -24,12 +24,18 @@
 //---------Conforto---------------
 #include "ConfortoModel.h"
 #include "ConfortoController.h"
-//---------Viagem---------------
-#include "ViagemModel.h"
-#include "ViagemController.h"
 //---------Estado---------------
 #include "EstadoModel.h"
 #include "EstadoController.h"
+//---------Viagem---------------
+#include "ViagemModel.h"
+#include "ViagemController.h"
+//---------Tipo Alerta------------
+#include "TipoAlertaModel.h"
+#include "TipoAlertaController.h"
+//--------Alerta------------
+#include "AlertaModel.h"
+#include "AlertaController.h"
 //---------Role---------------
 #include "RoleModel.h"
 #include "RoleController.h"
@@ -67,9 +73,9 @@ int main(int argc, char** argv) {
     readFile(&tipoUtilizadorModel, MAX_TIPO_UTILIZADORES);
 
     //postTipoUtilizador(&tipoUtilizadorModel); 
-    //getAllTipoUtilizador(&tipoUtilizadorModel);
+    // getAllTipoUtilizador(&tipoUtilizadorModel);
     //putTipoUtilizador(&tipoUtilizadorModel, 2);
-    //getShowTipoUtilizador(&tipoUtilizadorModel, 2);
+    //getShowTipoUtilizador(&tipoUtilizadorModel, 1);
     //deleteTipoUtilizador(&tipoUtilizadorModel,2);
 
     //---------------------------------------------------------------------------------------------------------//
@@ -105,9 +111,9 @@ int main(int argc, char** argv) {
 
     //postUtilizador(&utilizadorModel); 
     //getAllUtilizador(&utilizadorModel);
-    //putUtilizador(&utilizadorModel, 0);
-    //getShowUtilizador(&utilizadorModel, 0);
-    //deleteUtilizador(&utilizadorModel,0);
+    //putUtilizador(&utilizadorModel, 1);
+    //getShowUtilizador(&utilizadorModel, 1);
+    //deleteUtilizador(&utilizadorModel,1);
 
 
     //---------------------------------------------------------------------------------------------------------//
@@ -137,10 +143,10 @@ int main(int argc, char** argv) {
 
     readFile(&localModel, MAX_LOCAIS);
 
-    //postLocal(&localModel); 
+    //postLocal(&localModel);
     //getAllLocal(&localModel);
-    //putLocal(&localModel, 2);
-    //getShowLocal(&localModel, 2);
+    //putLocal(&localModel, 1);
+    //getShowLocal(&localModel, 1);
     //deleteLocal(&localModel,2);
 
     //---------------------------------------------------------------------------------------------------------//
@@ -172,9 +178,9 @@ int main(int argc, char** argv) {
 
     //postConforto(&confortoModel); 
     //getAllConforto(&confortoModel);
-    //putConforto(&confortoModel, 2);
-    //getShowConforto(&confortoModel, 2);
-    //deleteConforto(&confortoModel,2);
+    //putConforto(&confortoModel, 3);
+    //getShowConforto(&confortoModel, 3);
+    //deleteConforto(&confortoModel,3);
 
     //---------------------------------------------------------------------------------------------------------//
 
@@ -203,11 +209,11 @@ int main(int argc, char** argv) {
 
     readFile(&estadoModel, MAX_ESTADO);
 
-    //postEstado(&estadoModel); 
+    //postEstado(&estadoModel);
     //getAllEstado(&estadoModel);
-    //putEstado(&estadoModel, 2);
-    //getShowEstado(&estadoModel, 2);
-    //deleteEstado(&estadoModel,2);
+    //putEstado(&estadoModel,3);
+    //getShowEstado(&estadoModel, 3);
+    //deleteEstado(&estadoModel,3);
     //---------------------------------------------------------------------------------------------------------//
 
     Model viagemModel;
@@ -277,6 +283,103 @@ int main(int argc, char** argv) {
     //deleteViagem(&viagemModel,0);
 
 
+    //---------------------------------------------------------------------------------------------------------//
+    Model tipoAlertaModel;
+
+    const unsigned int MAX_TIPO_ALERTA = 30;
+    unsigned short contadorTipoAlerta = 0;
+
+
+    //Campos TipoAlerta
+
+    FieldAux tipoAlertaFields[] = {
+        {.fieldName = "id_tipo_alerta", .alias = "Numero Tipo Alerta", .sizeBytes = SHORT_SIZE, .type = SHORT, .unique = true, .required = true, .autoIncrement = true, .step = 1},
+        {.fieldName = "descricao", .alias = "Tipo de Alerta", .sizeBytes = SHORT_STRING, .type = STRING, .unique = false, .required = true}
+    };
+
+    //Data
+    TipoAlerta tipoAlertaData[MAX_TIPO_ALERTA];
+
+    //Numero de campos que o tipoAlerta tem
+    const unsigned int tipoAlertafieldsNumber = (sizeof (tipoAlertaFields) / sizeof (tipoAlertaFields[0]));
+    //Tamanho da estrutura
+    const unsigned int tamTipoAlerta = sizeof (TipoAlerta);
+
+    TipoAlertaModel(&tipoAlertaModel, tipoAlertaFields, tipoAlertafieldsNumber, tamTipoAlerta, tipoAlertaData, &contadorTipoAlerta);
+
+    readFile(&tipoAlertaModel, MAX_TIPO_ALERTA);
+
+    //postTipoAlerta(&tipoAlertaModel);
+    //getAllTipoAlerta(&tipoAlertaModel);
+    //putTipoAlerta(&tipoAlertaModel,3);
+    //getShowTipoAlerta(&tipoAlertaModel, 3);
+    //deleteTipoAlerta(&tipoAlertaModel,3);
+    //---------------------------------------------------------------------------------------------------------//
+    Model alertaModel;
+
+    const unsigned int MAX_ALERTA = 30;
+    unsigned short contadorAlerta = 0;
+
+
+    //Campos Alerta
+
+    FieldAux alertaFields[] = {
+        {.fieldName = "id_tipo_alerta", .alias = "Numero Tipo Alerta", .sizeBytes = SHORT_SIZE, .type = SHORT, .unique = true, .required = true, .autoIncrement = true, .step = 1},
+        {.fieldName = "descricao", .alias = "Tipo de Alerta", .sizeBytes = SHORT_STRING, .type = STRING, .unique = false, .required = true},
+        {
+            .fieldName = "id_tipo_alerta", .alias = "Numero Tipo Alerta", .sizeBytes = SHORT_SIZE, .type = SHORT,
+            .required = true, .unique = false, .foreignKey = true, .parentPrimaryKey = ID_TIPO_ALERTA_ALERTA, .parentClass = &tipoAlertaModel
+        },
+    };
+
+    //Data
+    Alerta alertaData[MAX_ALERTA];
+
+    //Numero de campos que o alerta tem
+    const unsigned int alertafieldsNumber = (sizeof (alertaFields) / sizeof (alertaFields[0]));
+    //Tamanho da estrutura
+    const unsigned int tamAlerta = sizeof (Alerta);
+
+    AlertaModel(&alertaModel, alertaFields, alertafieldsNumber, tamAlerta, alertaData, &contadorAlerta);
+
+    readFile(&alertaModel, MAX_ALERTA);
+
+    //postAlerta(&alertaModel);
+    //getAllAlerta(&alertaModel);
+    //putAlerta(&alertaModel,3);
+    //getShowAlerta(&alertaModel, 3);
+    //deleteAlerta(&alertaModel,3);
+    //---------------------------------------------------------------------------------------------------------//
+    Model roleModel;
+
+    const unsigned int MAX_ROLE = 30;
+    unsigned short contadorRole = 0;
+
+
+    //Campos Role
+
+    FieldAux roleFields[] = {
+        {.fieldName = "id_role", .alias = "Numero Role", .sizeBytes = SHORT_SIZE, .type = SHORT, .unique = true, .required = true, .autoIncrement = true, .step = 1},
+        {.fieldName = "descricao", .alias = "Role", .sizeBytes = SHORT_STRING, .type = STRING, .unique = false, .required = true}
+    };
+
+    //Data
+    Role roleData[MAX_ROLE];
+
+    //Numero de campos que o role tem
+    const unsigned int rolefieldsNumber = (sizeof (roleFields) / sizeof (roleFields[0]));
+    //Tamanho da estrutura
+    const unsigned int tamRole = sizeof (Role);
+
+    RoleModel(&roleModel, roleFields, rolefieldsNumber, tamRole, roleData, &contadorRole);
+
+    readFile(&roleModel, MAX_ROLE);
+
+    //postRole(&roleModel);
+    //getAllRole(&roleModel);
+    //putRole(&roleModel,3);
+    //getShowRole(&roleModel, 3);
+    //deleteRole(&roleModel,3);
     //---------------------------------------------------------------------------------------------------------//
 
     typedef struct {

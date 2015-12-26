@@ -9,7 +9,7 @@ void guardarConforto(Model *confortoModel) {
 
 void getAllConforto(Model *confortoModel) {
     puts("|-------------------|");
-    puts("|Confortos|");
+    puts("|-----Confortos-----|");
     puts("|-------------------|");
     fullList(confortoModel);
     puts("|-------------------|");
@@ -18,7 +18,7 @@ void getAllConforto(Model *confortoModel) {
 
 void getShowConforto(Model *confortoModel, const unsigned int indice) {
     puts("|---------------|");
-    puts("|Conforto|");
+    puts("|---Conforto----|");
     puts("|---------------|");
     singleList(confortoModel, indice);
     puts("|---------------|");
@@ -31,7 +31,7 @@ void postConforto(Model *confortoModel) {
     readChar(&resposta);
     if (resposta == 'Y' || resposta == 'y') {
         puts("|--------------------|");
-        puts("|Novo Conforto|");
+        puts("|----Novo Conforto---|");
         puts("|--------------------|");
         create(confortoModel);
         puts("|--------------------|");
@@ -43,7 +43,7 @@ void postConforto(Model *confortoModel) {
 
 void putConforto(Model *confortoModel, const unsigned int indice) {
     puts("|----------------------|");
-    puts("|Editar Conforto|");
+    puts("|----Editar Conforto---|");
     puts("|----------------------|");
     update(confortoModel, indice);
     puts("|----------------------|");

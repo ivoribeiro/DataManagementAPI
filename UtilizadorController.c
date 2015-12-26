@@ -6,7 +6,7 @@ void guardarUtilizador(Model *utilizadorModel) {
 
 void getAllUtilizador(Model *utilizadorModel) {
     puts("|-------------------|");
-    puts("|Utilizadores|");
+    puts("|----Utilizadores---|");
     puts("|-------------------|");
     fullList(utilizadorModel);
     puts("|-------------------|");
@@ -15,7 +15,7 @@ void getAllUtilizador(Model *utilizadorModel) {
 
 void getShowUtilizador(Model *utilizadorModel, const unsigned int indice) {
     puts("|---------------|");
-    puts("|Utilizador|");
+    puts("|---Utilizador--|");
     puts("|---------------|");
     singleList(utilizadorModel, indice);
     puts("|---------------|");
@@ -28,7 +28,7 @@ void postUtilizador(Model *utilizadorModel) {
     readChar(&resposta);
     if (resposta == 'Y' || resposta == 'y') {
         puts("|--------------------|");
-        puts("|Novo Utilizador|");
+        puts("|--Novo Utilizador---|");
         puts("|--------------------|");
         create(utilizadorModel);
         puts("|--------------------|");
@@ -40,7 +40,7 @@ void postUtilizador(Model *utilizadorModel) {
 
 void putUtilizador(Model *utilizadorModel, const unsigned int indice) {
     puts("|----------------------|");
-    puts("|Editar Utilizador|");
+    puts("|--Editar Utilizador---|");
     puts("|----------------------|");
     update(utilizadorModel, indice);
     puts("|----------------------|");

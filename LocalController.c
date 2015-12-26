@@ -8,7 +8,7 @@ void guardarLocal(Model *localModel) {
 
 void getAllLocal(Model *localModel) {
     puts("|-------------------|");
-    puts("|Locais|");
+    puts("|------Locais-------|");
     puts("|-------------------|");
     fullList(localModel);
     puts("|-------------------|");
@@ -17,7 +17,7 @@ void getAllLocal(Model *localModel) {
 
 void getShowLocal(Model *localModel, const unsigned int indice) {
     puts("|---------------|");
-    puts("|Local|");
+    puts("|-----Local-----|");
     puts("|---------------|");
     singleList(localModel, indice);
     puts("|---------------|");
@@ -30,7 +30,7 @@ void postLocal(Model *localModel) {
     readChar(&resposta);
     if (resposta == 'Y' || resposta == 'y') {
         puts("|--------------------|");
-        puts("|Novo Local|");
+        puts("|-----Novo Local-----|");
         puts("|--------------------|");
         create(localModel);
         puts("|--------------------|");
@@ -42,7 +42,7 @@ void postLocal(Model *localModel) {
 
 void putLocal(Model *localModel, const unsigned int indice) {
     puts("|----------------------|");
-    puts("|Editar Local|");
+    puts("|-----Editar Local-----|");
     puts("|----------------------|");
     update(localModel, indice);
     puts("|----------------------|");

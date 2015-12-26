@@ -12,10 +12,9 @@
 extern "C" {
 #endif
 
-
 #include <string.h>
 #include "AbstractDataTypes.h"
-
+#include "Date.h"
     typedef struct {
         unsigned short id_alerta;
         unsigned short id_tipo_alerta;

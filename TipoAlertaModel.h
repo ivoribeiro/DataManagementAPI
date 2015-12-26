@@ -17,12 +17,12 @@ extern "C" {
     typedef struct {
         unsigned short id_tipo_alerta;
         char descricao[SHORT_STRING];
-    } Role;
+    } TipoAlerta;
 
     typedef enum {
         ID_TIPO_ALERTA,
         DESCRICAO_TIPO_ALERTA
-    } CamposRole;
+    } CamposTipoAlerta;
 
 
 

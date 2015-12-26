@@ -23,7 +23,9 @@
         <itemPath>RoleModel.h</itemPath>
         <itemPath>TipoAlertaModel.h</itemPath>
         <itemPath>TipoUtilizadorModel.h</itemPath>
+        <itemPath>UtilizadorAlertaModel.h</itemPath>
         <itemPath>UtilizadorModel.h</itemPath>
+        <itemPath>UtilizadorViagem.h</itemPath>
         <itemPath>ViagemModel.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f3" displayName="vendor" projectFiles="true">
@@ -240,6 +242,8 @@
       </item>
       <item path="TipoUtilizadorModel.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="UtilizadorAlertaModel.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="UtilizadorController.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="UtilizadorController.h" ex="false" tool="3" flavor2="0">
@@ -247,6 +251,8 @@
       <item path="UtilizadorModel.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="UtilizadorModel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="UtilizadorViagem.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Utils.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -395,6 +401,8 @@
       </item>
       <item path="TipoUtilizadorModel.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="UtilizadorAlertaModel.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="UtilizadorController.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="UtilizadorController.h" ex="false" tool="3" flavor2="0">
@@ -402,6 +410,8 @@
       <item path="UtilizadorModel.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="UtilizadorModel.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="UtilizadorViagem.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Utils.c" ex="false" tool="0" flavor2="0">
       </item>

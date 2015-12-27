@@ -75,7 +75,3 @@ void delete(Model *model, const unsigned short index) {
 
 
 
-
-
-
-

@@ -40,7 +40,6 @@
 #include "RoleModel.h"
 #include "RoleController.h"
 
-#include "jsonADT.h"
 /*
  * 
  */
@@ -393,10 +392,7 @@ int main(int argc, char** argv) {
     models.tipoUtilizadorModel = &tipoUtilizadorModel;
     models.utilizadorModel = &utilizadorModel;
 
-    //json_test("test.json");
-    char jsonStr[100];
-    jsonAllElement(&roleModel,jsonStr);
-    printf("%s\n",jsonStr);
+  
 
 
     return (EXIT_SUCCESS);

@@ -66,8 +66,12 @@ OBJECTFILES= \
 	${OBJECTDIR}/ViagemController.o \
 	${OBJECTDIR}/ViagemModel.o \
 	${OBJECTDIR}/file.o \
+	${OBJECTDIR}/json.o \
+	${OBJECTDIR}/jsonADT.o \
+	${OBJECTDIR}/loginPartial.o \
 	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/main_teste.o
+	${OBJECTDIR}/main_teste.o \
+	${OBJECTDIR}/test_json.o
 
 
 # C Compiler Flags
@@ -249,6 +253,21 @@ ${OBJECTDIR}/file.o: file.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/file.o file.c
 
+${OBJECTDIR}/json.o: json.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/json.o json.c
+
+${OBJECTDIR}/jsonADT.o: jsonADT.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/jsonADT.o jsonADT.c
+
+${OBJECTDIR}/loginPartial.o: loginPartial.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/loginPartial.o loginPartial.c
+
 ${OBJECTDIR}/main.o: main.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -258,6 +277,11 @@ ${OBJECTDIR}/main_teste.o: main_teste.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main_teste.o main_teste.c
+
+${OBJECTDIR}/test_json.o: test_json.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/test_json.o test_json.c
 
 # Subprojects
 .build-subprojects:

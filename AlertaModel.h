@@ -27,7 +27,7 @@ extern "C" {
         ID_TIPO_ALERTA_ALERTA,
         DESCRICAO_ALERTA,
         DATE_ALERT
-    } CamposConforto;
+    } CamposAlerta;
 
 
 

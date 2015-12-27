@@ -40,6 +40,7 @@
 #include "RoleModel.h"
 #include "RoleController.h"
 
+#include "jsonADT.h"
 /*
  * 
  */
@@ -377,7 +378,7 @@ int main(int argc, char** argv) {
 
     //postRole(&roleModel);
     //getAllRole(&roleModel);
-    //putRole(&roleModel,3);
+    //putRole(&roleModel,0 );
     //getShowRole(&roleModel, 3);
     //deleteRole(&roleModel,3);
     //---------------------------------------------------------------------------------------------------------//
@@ -392,7 +393,10 @@ int main(int argc, char** argv) {
     models.tipoUtilizadorModel = &tipoUtilizadorModel;
     models.utilizadorModel = &utilizadorModel;
 
-
+    //json_test("test.json");
+    char jsonStr[100];
+    jsonAllElement(&roleModel,jsonStr);
+    printf("%s\n",jsonStr);
 
 
     return (EXIT_SUCCESS);

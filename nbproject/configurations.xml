@@ -20,6 +20,7 @@
         <itemPath>ConfortoModel.h</itemPath>
         <itemPath>EstadoModel.h</itemPath>
         <itemPath>LocalModel.h</itemPath>
+        <itemPath>Model.h</itemPath>
         <itemPath>RoleModel.h</itemPath>
         <itemPath>TipoAlertaModel.h</itemPath>
         <itemPath>TipoUtilizadorModel.h</itemPath>
@@ -77,15 +78,6 @@
           </logicalFolder>
         </logicalFolder>
         <logicalFolder name="f1" displayName="models" projectFiles="true">
-          <itemPath>AlertaModel.c</itemPath>
-          <itemPath>ConfortoModel.c</itemPath>
-          <itemPath>EstadoModel.c</itemPath>
-          <itemPath>LocalModel.c</itemPath>
-          <itemPath>RoleModel.c</itemPath>
-          <itemPath>TIpoAlertaModel.c</itemPath>
-          <itemPath>TipoUtilizadorModel.c</itemPath>
-          <itemPath>UtilizadorModel.c</itemPath>
-          <itemPath>ViagemModel.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f1" displayName="storage" projectFiles="true">
           <logicalFolder name="f1" displayName="logs" projectFiles="true">
@@ -98,6 +90,7 @@
           <logicalFolder name="f1" displayName="partials" projectFiles="true">
             <itemPath>loginPartial.c</itemPath>
           </logicalFolder>
+          <itemPath>index.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="public" projectFiles="true">
@@ -110,6 +103,7 @@
         <itemPath>Get.c</itemPath>
         <itemPath>List.c</itemPath>
         <itemPath>Memory.c</itemPath>
+        <itemPath>Model.c</itemPath>
         <itemPath>Print.c</itemPath>
         <itemPath>Read.c</itemPath>
         <itemPath>ReadADT.c</itemPath>
@@ -151,8 +145,6 @@
       </item>
       <item path="AlertaController.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="AlertaModel.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="AlertaModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Cast.c" ex="false" tool="0" flavor2="0">
@@ -166,8 +158,6 @@
       <item path="ConfortoController.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="ConfortoController.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="ConfortoModel.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="ConfortoModel.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -183,8 +173,6 @@
       </item>
       <item path="EstadoController.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="EstadoModel.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="EstadoModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Get.c" ex="false" tool="0" flavor2="0">
@@ -199,13 +187,15 @@
       </item>
       <item path="LocalController.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="LocalModel.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="LocalModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Memory.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Memory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Model.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Print.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -223,15 +213,11 @@
       </item>
       <item path="RoleController.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="RoleModel.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="RoleModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Search.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Search.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="TIpoAlertaModel.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Time.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -247,8 +233,6 @@
       </item>
       <item path="TipoUtilizadorController.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="TipoUtilizadorModel.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="TipoUtilizadorModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="UtilizadorAlertaModel.h" ex="false" tool="3" flavor2="0">
@@ -256,8 +240,6 @@
       <item path="UtilizadorController.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="UtilizadorController.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="UtilizadorModel.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="UtilizadorModel.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -271,13 +253,13 @@
       </item>
       <item path="ViagemController.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="ViagemModel.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="ViagemModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="file.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="file.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="index.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="json.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -324,8 +306,6 @@
       </item>
       <item path="AlertaController.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="AlertaModel.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="AlertaModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Cast.c" ex="false" tool="0" flavor2="0">
@@ -339,8 +319,6 @@
       <item path="ConfortoController.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="ConfortoController.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="ConfortoModel.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="ConfortoModel.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -356,8 +334,6 @@
       </item>
       <item path="EstadoController.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="EstadoModel.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="EstadoModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Get.c" ex="false" tool="0" flavor2="0">
@@ -372,13 +348,15 @@
       </item>
       <item path="LocalController.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="LocalModel.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="LocalModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Memory.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Memory.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Model.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Model.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Print.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -396,15 +374,11 @@
       </item>
       <item path="RoleController.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="RoleModel.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="RoleModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Search.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Search.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="TIpoAlertaModel.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="Time.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -420,8 +394,6 @@
       </item>
       <item path="TipoUtilizadorController.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="TipoUtilizadorModel.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="TipoUtilizadorModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="UtilizadorAlertaModel.h" ex="false" tool="3" flavor2="0">
@@ -429,8 +401,6 @@
       <item path="UtilizadorController.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="UtilizadorController.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="UtilizadorModel.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="UtilizadorModel.h" ex="false" tool="3" flavor2="0">
       </item>
@@ -444,13 +414,13 @@
       </item>
       <item path="ViagemController.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="ViagemModel.c" ex="false" tool="0" flavor2="0">
-      </item>
       <item path="ViagemModel.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="file.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="file.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="index.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="json.c" ex="false" tool="0" flavor2="0">
       </item>

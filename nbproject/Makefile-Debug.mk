@@ -36,36 +36,29 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/AlertaController.o \
-	${OBJECTDIR}/AlertaModel.o \
 	${OBJECTDIR}/Cast.o \
 	${OBJECTDIR}/Compare.o \
 	${OBJECTDIR}/ConfortoController.o \
-	${OBJECTDIR}/ConfortoModel.o \
 	${OBJECTDIR}/DataManagement.o \
 	${OBJECTDIR}/EstadoController.o \
-	${OBJECTDIR}/EstadoModel.o \
 	${OBJECTDIR}/Get.o \
 	${OBJECTDIR}/List.o \
 	${OBJECTDIR}/LocalController.o \
-	${OBJECTDIR}/LocalModel.o \
 	${OBJECTDIR}/Memory.o \
+	${OBJECTDIR}/Model.o \
 	${OBJECTDIR}/Print.o \
 	${OBJECTDIR}/Read.o \
 	${OBJECTDIR}/ReadADT.o \
 	${OBJECTDIR}/RoleController.o \
-	${OBJECTDIR}/RoleModel.o \
 	${OBJECTDIR}/Search.o \
-	${OBJECTDIR}/TIpoAlertaModel.o \
 	${OBJECTDIR}/Time.o \
 	${OBJECTDIR}/TipoAlertaController.o \
 	${OBJECTDIR}/TipoUtilizadorController.o \
-	${OBJECTDIR}/TipoUtilizadorModel.o \
 	${OBJECTDIR}/UtilizadorController.o \
-	${OBJECTDIR}/UtilizadorModel.o \
 	${OBJECTDIR}/Utils.o \
 	${OBJECTDIR}/ViagemController.o \
-	${OBJECTDIR}/ViagemModel.o \
 	${OBJECTDIR}/file.o \
+	${OBJECTDIR}/index.o \
 	${OBJECTDIR}/json.o \
 	${OBJECTDIR}/jsonADT.o \
 	${OBJECTDIR}/loginPartial.o \
@@ -103,11 +96,6 @@ ${OBJECTDIR}/AlertaController.o: AlertaController.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AlertaController.o AlertaController.c
 
-${OBJECTDIR}/AlertaModel.o: AlertaModel.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/AlertaModel.o AlertaModel.c
-
 ${OBJECTDIR}/Cast.o: Cast.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -123,11 +111,6 @@ ${OBJECTDIR}/ConfortoController.o: ConfortoController.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ConfortoController.o ConfortoController.c
 
-${OBJECTDIR}/ConfortoModel.o: ConfortoModel.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ConfortoModel.o ConfortoModel.c
-
 ${OBJECTDIR}/DataManagement.o: DataManagement.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -137,11 +120,6 @@ ${OBJECTDIR}/EstadoController.o: EstadoController.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/EstadoController.o EstadoController.c
-
-${OBJECTDIR}/EstadoModel.o: EstadoModel.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/EstadoModel.o EstadoModel.c
 
 ${OBJECTDIR}/Get.o: Get.c 
 	${MKDIR} -p ${OBJECTDIR}
@@ -158,15 +136,15 @@ ${OBJECTDIR}/LocalController.o: LocalController.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/LocalController.o LocalController.c
 
-${OBJECTDIR}/LocalModel.o: LocalModel.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/LocalModel.o LocalModel.c
-
 ${OBJECTDIR}/Memory.o: Memory.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Memory.o Memory.c
+
+${OBJECTDIR}/Model.o: Model.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Model.o Model.c
 
 ${OBJECTDIR}/Print.o: Print.c 
 	${MKDIR} -p ${OBJECTDIR}
@@ -188,20 +166,10 @@ ${OBJECTDIR}/RoleController.o: RoleController.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/RoleController.o RoleController.c
 
-${OBJECTDIR}/RoleModel.o: RoleModel.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/RoleModel.o RoleModel.c
-
 ${OBJECTDIR}/Search.o: Search.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Search.o Search.c
-
-${OBJECTDIR}/TIpoAlertaModel.o: TIpoAlertaModel.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TIpoAlertaModel.o TIpoAlertaModel.c
 
 ${OBJECTDIR}/Time.o: Time.c 
 	${MKDIR} -p ${OBJECTDIR}
@@ -218,20 +186,10 @@ ${OBJECTDIR}/TipoUtilizadorController.o: TipoUtilizadorController.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TipoUtilizadorController.o TipoUtilizadorController.c
 
-${OBJECTDIR}/TipoUtilizadorModel.o: TipoUtilizadorModel.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TipoUtilizadorModel.o TipoUtilizadorModel.c
-
 ${OBJECTDIR}/UtilizadorController.o: UtilizadorController.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/UtilizadorController.o UtilizadorController.c
-
-${OBJECTDIR}/UtilizadorModel.o: UtilizadorModel.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/UtilizadorModel.o UtilizadorModel.c
 
 ${OBJECTDIR}/Utils.o: Utils.c 
 	${MKDIR} -p ${OBJECTDIR}
@@ -243,15 +201,15 @@ ${OBJECTDIR}/ViagemController.o: ViagemController.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ViagemController.o ViagemController.c
 
-${OBJECTDIR}/ViagemModel.o: ViagemModel.c 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ViagemModel.o ViagemModel.c
-
 ${OBJECTDIR}/file.o: file.c 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/file.o file.c
+
+${OBJECTDIR}/index.o: index.c 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/index.o index.c
 
 ${OBJECTDIR}/json.o: json.c 
 	${MKDIR} -p ${OBJECTDIR}

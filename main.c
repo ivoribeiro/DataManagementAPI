@@ -13,32 +13,25 @@
 
 #include "DataManagement.h"
 //---------TipoUtilizador------------
-#include "TipoUtilizadorModel.h"
 #include "TipoUtilizadorController.h"
 //---------Utilizador---------------
-#include "UtilizadorModel.h"
 #include "UtilizadorController.h"
 //---------Local---------------
-#include "LocalModel.h"
 #include "LocalController.h"
 //---------Conforto---------------
-#include "ConfortoModel.h"
 #include "ConfortoController.h"
 //---------Estado---------------
-#include "EstadoModel.h"
 #include "EstadoController.h"
 //---------Viagem---------------
-#include "ViagemModel.h"
 #include "ViagemController.h"
 //---------Tipo Alerta------------
-#include "TipoAlertaModel.h"
 #include "TipoAlertaController.h"
 //--------Alerta------------
-#include "AlertaModel.h"
 #include "AlertaController.h"
 //---------Role---------------
-#include "RoleModel.h"
 #include "RoleController.h"
+
+#include "Model.h"
 
 /*
  * 
@@ -68,7 +61,7 @@ int main(int argc, char** argv) {
     //Tamanho da estrutura
     const unsigned int tamTipoUtilizador = sizeof (TipoUtilizador);
 
-    TipoUtilizadorModel(&tipoUtilizadorModel, tipoUtilizadorFields, tipoUtilizadorfieldsNumber, tamTipoUtilizador, tipoUtilizadorData, &contadorTipoUtilizador);
+    ModelConstruct("TipoUtilizador","tipo_utilizador.txt",&tipoUtilizadorModel, tipoUtilizadorFields, tipoUtilizadorfieldsNumber, tamTipoUtilizador, tipoUtilizadorData, &contadorTipoUtilizador,ID_TIPO_UTILIZADOR,DESCRICAO_TIPO_UTILIZADOR);
 
     readFile(&tipoUtilizadorModel, MAX_TIPO_UTILIZADORES);
 
@@ -105,7 +98,7 @@ int main(int argc, char** argv) {
     //Tamanho da estrutura
     const unsigned int tamUtilizador = sizeof (Utilizador);
 
-    UtilizadorModel(&utilizadorModel, utilizadorFields, utilizadorFieldsNumber, tamUtilizador, utilizadorData, &contadorUtilizador);
+    ModelConstruct("Utilizador","utilizador.txt",&utilizadorModel, utilizadorFields, utilizadorFieldsNumber, tamUtilizador, utilizadorData, &contadorUtilizador,ID_UTILIZADOR,USERNAME);
 
     readFile(&utilizadorModel, MAX_UTILIZADORES);
 
@@ -139,7 +132,7 @@ int main(int argc, char** argv) {
     //Tamanho da estrutura
     const unsigned int tamLocal = sizeof (Local);
 
-    LocalModel(&localModel, localFields, localfieldsNumber, tamLocal, localData, &contadorLocais);
+    ModelConstruct("Local","local.txt",&localModel, localFields, localfieldsNumber, tamLocal, localData, &contadorLocais,ID_LOCAL,NOME_LOCAL);
 
     readFile(&localModel, MAX_LOCAIS);
 
@@ -172,7 +165,7 @@ int main(int argc, char** argv) {
     //Tamanho da estrutura
     const unsigned int tamConforto = sizeof (Conforto);
 
-    ConfortoModel(&confortoModel, confortoFields, confortofieldsNumber, tamConforto, confortoData, &contadorConforto);
+    ModelConstruct("Conforto","conforto.txt",&confortoModel, confortoFields, confortofieldsNumber, tamConforto, confortoData, &contadorConforto,ID_CONFORTO,DESCRICAO_CONFORTO);
 
     readFile(&confortoModel, MAX_CONFORTOS);
 
@@ -205,7 +198,7 @@ int main(int argc, char** argv) {
     //Tamanho da estrutura
     const unsigned int tamEstado = sizeof (Estado);
 
-    EstadoModel(&estadoModel, estadoFields, estadofieldsNumber, tamEstado, estadoData, &contadorEstado);
+    ModelConstruct("Estado","estado.txt",&estadoModel, estadoFields, estadofieldsNumber, tamEstado, estadoData, &contadorEstado,ID_ESTADO,DESCRICAO_ESTADO);
 
     readFile(&estadoModel, MAX_ESTADO);
 
@@ -272,7 +265,7 @@ int main(int argc, char** argv) {
     //Tamanho da estrutura
     const unsigned int tamViagem = sizeof (Viagem);
 
-    ViagemModel(&viagemModel, viagemFields, viagemFieldsNumber, tamViagem, viagemData, &contadorViagem);
+    ModelConstruct("Viagem","viagem.txt",&viagemModel, viagemFields, viagemFieldsNumber, tamViagem, viagemData, &contadorViagem,ID_VIAGEM,ID_ESTAD0_VIAGEM);
 
     readFile(&viagemModel, MAX_VIAGENS);
 
@@ -305,7 +298,7 @@ int main(int argc, char** argv) {
     //Tamanho da estrutura
     const unsigned int tamTipoAlerta = sizeof (TipoAlerta);
 
-    TipoAlertaModel(&tipoAlertaModel, tipoAlertaFields, tipoAlertafieldsNumber, tamTipoAlerta, tipoAlertaData, &contadorTipoAlerta);
+    ModelConstruct("TipoAlerta","tipo_alerta.txt",&tipoAlertaModel, tipoAlertaFields, tipoAlertafieldsNumber, tamTipoAlerta, tipoAlertaData, &contadorTipoAlerta,ID_TIPO_ALERTA,DESCRICAO_TIPO_ALERTA);
 
     readFile(&tipoAlertaModel, MAX_TIPO_ALERTA);
 
@@ -340,7 +333,7 @@ int main(int argc, char** argv) {
     //Tamanho da estrutura
     const unsigned int tamAlerta = sizeof (Alerta);
 
-    AlertaModel(&alertaModel, alertaFields, alertafieldsNumber, tamAlerta, alertaData, &contadorAlerta);
+    ModelConstruct("Alerta","alerta.txt",&alertaModel, alertaFields, alertafieldsNumber, tamAlerta, alertaData, &contadorAlerta,ID_ALERTA,DESCRICAO_ALERTA);
 
     readFile(&alertaModel, MAX_ALERTA);
 
@@ -371,7 +364,7 @@ int main(int argc, char** argv) {
     //Tamanho da estrutura
     const unsigned int tamRole = sizeof (Role);
 
-    RoleModel(&roleModel, roleFields, rolefieldsNumber, tamRole, roleData, &contadorRole);
+    ModelConstruct("Role","role.txt",&roleModel, roleFields, rolefieldsNumber, tamRole, roleData, &contadorRole,ID_ROLE,DESCRICAO_ROLE);
 
     readFile(&roleModel, MAX_ROLE);
 
@@ -392,7 +385,7 @@ int main(int argc, char** argv) {
     models.tipoUtilizadorModel = &tipoUtilizadorModel;
     models.utilizadorModel = &utilizadorModel;
 
-  
+    indexView();
 
 
     return (EXIT_SUCCESS);
